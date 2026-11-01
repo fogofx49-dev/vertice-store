@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07130f">
+<meta name="description" content="VÉRTICE STORE — materiais digitais para aprender a organizar o dinheiro com mais clareza e consciência.">
+<title>VÉRTICE STORE | Organização. Conhecimento. Evolução.</title>
+<link rel="icon" type="image/jpeg" href="vertice-icon.jpg">
+<link rel="apple-touch-icon" href="vertice-icon.jpg">
+<style>
+:root{
+  --bg:#07130f;--surface:#0d2119;--surface2:#112b20;--gold:#dfbd69;
+  --gold2:#f0d994;--green:#39b77a;--text:#f7f7f0;--muted:#b8c8be;
+  --line:rgba(223,189,105,.22);--shadow:0 22px 65px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 85% 0%,rgba(31,112,73,.25),transparent 35%),var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+.top{position:sticky;top:0;z-index:10;background:rgba(7,19,15,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:4px;color:var(--gold);font-size:1.35rem;line-height:1.1}
+.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid var(--gold);box-shadow:0 0 18px rgba(57,183,122,.25)}
+.brandname small{display:block;font-size:.58rem;letter-spacing:2px;color:var(--muted);margin-top:7px}
+.brand-banner{width:100%;display:block;max-height:390px;object-fit:cover;border-bottom:1px solid var(--line)}
+.brand small{display:block;font-size:.58rem;letter-spacing:2px;color:var(--muted);margin-top:7px}
+.navlinks{display:flex;gap:25px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;transition:.2s}
+.navlinks a:hover{color:var(--gold2)}
+.navlinks .navcta{padding:9px 15px;border:1px solid var(--line);border-radius:8px;color:var(--gold2)}
+.hero{padding:82px 0 76px;display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:.75rem;letter-spacing:2px;font-weight:800}
+.eyebrow:before{content:"";width:25px;height:1px;background:var(--gold)}
+h1{font-size:clamp(2.65rem,6vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:20px 0}
+h1 span{color:var(--gold)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:570px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:800;font-size:.92rem;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.primary{background:linear-gradient(135deg,var(--gold2),#b88b32);color:#172016;box-shadow:0 10px 30px rgba(190,151,61,.16)}
+.btn.outline{border:1px solid var(--line);color:var(--gold2)}
+.heroart{position:relative;padding:18px}
+.heroart:before{content:"";position:absolute;inset:8% 4%;background:rgba(38,145,91,.13);filter:blur(45px);border-radius:50%}
+.cover{position:relative;width:100%;max-width:430px;display:block;margin:auto;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.trustrow{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:.82rem}
+.trustrow span:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}
+section{padding:68px 0}
+.sectionhead{text-align:center;margin:0 auto 34px;max-width:700px}
+.kicker{color:var(--gold);font-size:.72rem;font-weight:800;letter-spacing:2px}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin:9px 0 12px}
+.sectionhead p{color:var(--muted);margin:0}
+.product{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;background:linear-gradient(145deg,var(--surface),#091710);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,42px);box-shadow:var(--shadow)}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:6px 12px;color:var(--gold2);font-size:.72rem;font-weight:800;letter-spacing:1px}
+.product h3{font-size:1.85rem;line-height:1.2;margin:15px 0 8px}
+.product p{color:var(--muted)}
+.product ul{padding-left:20px;color:var(--muted)}
+.product li{margin:8px 0}
+.price{font-size:2.3rem;color:var(--gold2);font-weight:900;margin:14px 0 0}
+.price small{font-size:.8rem;color:var(--muted);font-weight:500}
+.productvisual{background:linear-gradient(145deg,#173b2a,#0a1a13);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center}
+.productvisual .mini{width:min(230px,80%);max-height:300px;object-fit:contain;border-radius:10px;box-shadow:0 18px 45px #0008}
+.bonus{margin-top:20px;padding:15px;border-radius:12px;background:rgba(7,19,15,.55);border:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:left}
+.bonus b{color:var(--gold2)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:var(--surface);border:1px solid var(--line);padding:24px;border-radius:15px}
+.card .number{color:var(--gold);font-size:.75rem;font-weight:900;letter-spacing:1px}
+.card h3{margin:8px 0 5px;font-size:1.12rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
+.aboutbox{background:var(--surface);border:1px solid var(--line);padding:28px;border-radius:16px}
+.aboutbox p{color:var(--muted);margin-bottom:0}
+.notice{background:#13271d;border-left:3px solid var(--gold);padding:17px 19px;border-radius:9px;color:var(--muted);font-size:.9rem}
+.faq{max-width:800px;margin:auto}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 19px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:var(--gold2)}
+details p{color:var(--muted);margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:760px){
+ .nav{padding:15px 0;align-items:flex-start;flex-direction:column}
+ .brand img{width:42px;height:42px}
+ .navlinks{gap:15px;flex-wrap:wrap}
+ .navlinks a{font-size:.82rem}
+ .hero{padding:52px 0 42px;grid-template-columns:1fr;gap:25px}
+ .heroart{padding:5px}
+ .cover{max-width:330px}
+ section{padding:48px 0}
+ .product,.about{grid-template-columns:1fr}
+ .grid3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a href="#" class="brand" style="text-decoration:none"><img src="vertice-logo.jpg" alt="Símbolo VÉRTICE"><span class="brandname">VÉRTICE<small>STORE · PRODUTOS DIGITAIS</small></span></a>
+    <nav class="navlinks" aria-label="Navegação principal">
+      <a href="#produto">Produto</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#sobre">Sobre</a>
+      <a class="navcta" href="#produto">Ver coleção</a>
+    </nav>
+  </div>
+</header>
+<img class="brand-banner" src="vertice-banner.jpg" alt="Banner institucional da VÉRTICE STORE">
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <div class="eyebrow">EDUCAÇÃO FINANCEIRA PARA INICIANTES</div>
+      <h1>Mais clareza para cuidar do <span>teu dinheiro.</span></h1>
+      <p class="lead">Materiais digitais simples e práticos para aprender a organizar despesas, planear objetivos e desenvolver hábitos financeiros conscientes — um passo de cada vez.</p>
+      <div class="actions">
+        <a class="btn primary" href="#produto">Conhecer o ebook</a>
+        <a class="btn outline" href="#sobre">Conhecer a VÉRTICE</a>
+      </div>
+      <div class="trustrow">
+        <span>Conteúdo para iniciantes</span>
+        <span>Formato digital PDF</span>
+        <span>Aprendizagem ao teu ritmo</span>
+      </div>
+    </div>
+    <div class="heroart">
+      <img class="cover" src="capa-ebook.png" alt="Capa do ebook O Controlo do Teu Dinheiro">
+    </div>
+  </section>
+
+  <section class="wrap" id="produto">
+    <div class="sectionhead">
+      <div class="kicker">PRIMEIRO PRODUTO DA COLEÇÃO</div>
+      <h2>Conhece o teu próximo passo</h2>
+      <p>Um material introdutório para transformar informação em pequenas ações do dia a dia.</p>
+    </div>
+    <div class="product">
+      <div>
+        <span class="tag">EBOOK + PLANNER BÓNUS</span>
+        <h3>O Controlo do Teu Dinheiro</h3>
+        <p>Um guia educativo para começares a compreender o teu orçamento, acompanhar despesas e definir objetivos realistas.</p>
+        <ul>
+          <li>8 capítulos educativos</li>
+          <li>Exercícios e modelos de orçamento</li>
+          <li>Plano prático de 30 dias</li>
+          <li>Planner financeiro complementar</li>
+        </ul>
+        <div class="price">R$ 19,90 <small>preço sugerido</small></div>
+        <p class="notice">Esta é uma prévia da loja. A compra e o pagamento online ainda não estão disponíveis.</p>
+      </div>
+      <div class="productvisual">
+        <img class="mini" src="capa-ebook.png" alt="Capa do ebook O Controlo do Teu Dinheiro">
+        <div class="bonus"><b>BÓNUS INCLUÍDO NA COLEÇÃO</b><br>Planner financeiro em PDF para registar orçamento, despesas, objetivos e revisão mensal.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="beneficios">
+    <div class="sectionhead">
+      <div class="kicker">UM MÉTODO SIMPLES</div>
+      <h2>Começa com três passos</h2>
+      <p>Não precisas de saber tudo para começares a aprender.</p>
+    </div>
+    <div class="grid3">
+      <article class="card"><div class="number">01 · ORGANIZA</div><h3>Conhece o teu orçamento</h3><p>Regista entradas e despesas para perceberes melhor para onde vai o dinheiro.</p></article>
+      <article class="card"><div class="number">02 · PLANEIA</div><h3>Define objetivos realistas</h3><p>Escolhe prioridades e acompanha o teu progresso ao longo do mês.</p></article>
+      <article class="card"><div class="number">03 · APRENDE</div><h3>Cria hábitos conscientes</h3><p>Aprende ao teu ritmo e melhora as tuas decisões com informação.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="sobre">
+    <div class="sectionhead">
+      <div class="kicker">A NOSSA PROPOSTA</div>
+      <h2>Conhecimento que ajuda a avançar</h2>
+      <p>A VÉRTICE acredita que a organização começa com informação clara e passos possíveis.</p>
+    </div>
+    <div class="about">
+      <div class="aboutbox"><span class="tag">VÉRTICE STORE</span><h3>Organização. Conhecimento. Evolução.</h3><p>Uma marca em desenvolvimento dedicada a materiais digitais de educação, organização e aprendizagem, com linguagem acessível para quem está a começar.</p></div>
+      <div class="notice"><b style="color:var(--gold2)">Transparência e segurança</b><br>Este site é uma demonstração. Não processa pagamentos, não recolhe dados pessoais e não confirma encomendas. Qualquer futura configuração de vendas, pagamentos e entrega deverá ser feita com um responsável legal e de acordo com as regras da plataforma escolhida. Os materiais são educativos e não substituem aconselhamento financeiro profissional.</div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sectionhead">
+      <div class="kicker">DÚVIDAS FREQUENTES</div>
+      <h2>Antes de começares</h2>
+    </div>
+    <div class="faq">
+      <details><summary>O produto já pode ser comprado?</summary><p>Ainda não. Esta versão apresenta o produto, mas não tem checkout nem sistema de pagamento ativo.</p></details>
+      <details><summary>Em que formato estão os materiais?</summary><p>O ebook e o planner foram preparados em formato PDF.</p></details>
+      <details><summary>O conteúdo é adequado para iniciantes?</summary><p>Sim. O material foi pensado como uma introdução à organização financeira e à criação de hábitos conscientes.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><b style="color:var(--gold)">VÉRTICE STORE</b> · Produtos Digitais</span>
+    <span>Organização. Conhecimento. Evolução.</span>
+    <span>© 2026 VÉRTICE</span>
+  </div>
+</footer>
+</body>
+</html>
